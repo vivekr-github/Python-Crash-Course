@@ -1,0 +1,19 @@
+
+
+Dictionary:
+- Data structure that stores data as key:value pairs
+- use key to access corresponding value
+- while list index - always number; key can be of a different data type
+- use {} for dictionary
+- key and value separated by ':'
+
+Dictionary Operations and Methods:
+- len(dictionary) - number of items
+- in - check if key in dictionary
+- del dictionary[key] - remove item with key key
+- dictionary.items() - returns tuple with 1st item as key and 2nd item as value
+- dictionary.keys() - returns list of keys
+- dictionary.values() - returns list of values
+- dictionary.get(key, default) - Returns the element corresponding to key, or default if it's not present
+- dictionary.update(other_dictionary) - Updates the dictionary with the items coming from the other dictionary. Existing entries will be replaced; new entries will be added.
+- dictionary.clear() - Removes all the items of the dictionary
