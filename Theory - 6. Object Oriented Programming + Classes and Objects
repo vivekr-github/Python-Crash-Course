@@ -21,7 +21,7 @@ Class
 - recommendation - start name with capital letter
 Object
 - create instance of class by assigning it to variable
-- set or access attributes, call methods using dot notation
+- set or access attributes and call methods, using dot notation
 
 - syntax:
     class class_name:
