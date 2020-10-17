@@ -1,0 +1,54 @@
+Functions and Keywords:
+- Building blocks of syntax.
+- Functions - pieces of code - perform a unit of work.
+    Python Built-in functions - https://docs.python.org/3/library/functions.html
+- Keywords - Reserved words - to construct instructions.
+    Examples - https://www.programiz.com/python-programming/keyword-list
+
+
+Data Types Recap:
+- String - text in between quotes - single or double
+- Integer - Whole Number - without fraction
+- Float - Real Number - with fraction
+
+- Mixing incompatible data types - may encounter a TypeError.
+- Check the data type - using type() function.
+
+
+Type Conversion:
+- Convert variable from one data type to another
+- Implicit Conversion - interpreter automatically converts
+- Explicit Conversion - Manually convert by calling a function eg. str()
+
+eg.
+total = 2048 + 4375 + 97685 + 125 + 8
+files = 5
+average = total / files
+print("Average file siez is " + str(average))
+
+
+Defining Functions:
+- Start with 'def' keyword - followed by function name + parameters - end in ':'
+- Followed by consistently indented function body.
+- Optional 'return' at the end - multiple values can be returned
+- If no return values mentioned - function returns 'None'
+
+
+Code Style
+- Critical for readability of code.
+- Extensively use comments - improve readability.
+- Use relevant names for variables and function names.
+
+
+Popular Online Interpreters and Codepads:
+    https://www.python.org/shell/
+    https://www.onlinegdb.com/online_python_interpreter
+    https://repl.it/languages/python3
+    https://www.tutorialspoint.com/execute_python3_online.php
+    https://rextester.com/l/python3_online_compiler
+    https://trinket.io/python3
+
+
+Resources:
+- Official Documentation - https://docs.python.org/3/
+- Q&A Forum - https://stackoverflow.com/
