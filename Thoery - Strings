@@ -1,0 +1,54 @@
+
+
+
+String
+- data type - represent a piece of text - single or double quotes
+- strings are immutable - can't be modified -> in case of typo, new value has to be assigned to variable - cannot edit
+- indexing - access each individual character
+    string[i], 0<i<n
+- negative index - access string from reverse
+    string[-1] - last character and so on
+
+
+String Operations and Methods:
+- Concatenation - '+'
+- Repetition - '*'
+- Length - len(string)
+- slicing - access portion of string
+    string[a:b] - access characters from index a to index b
+- Find Index - variable.index('character') -> returns first match - ValueError if not found
+- in - check if sub-string present -> "sub-string" in variable
+- Others - upper, lower, strip, count, endswith, isnumeric, isalpha, join, split, replace
+- Exhaustive List - https://www.w3schools.com/python/python_ref_string.asp
+
+
+String Formatting:
+- format method - concatenate and format strings
+- {} is placeholder which will be replaced
+- syntax
+    "{} string {} {}".format(variables)
+- formatting expression - within curly braces
+   Formatting expressions:
+    Expr	Meaning	Example
+    {:d}	integer value	'{:d}'.format(10.5) → '10'
+    {:.2f}	floating point with that many decimals	'{:.2f}'.format(0.5) → '0.50'
+    {:.2s}	string with that many characters	'{:.2s}'.format('Python') → 'Py'
+    {:<6s}	string aligned to the left that many spaces	'{:<6s}'.format('Py') → 'Py    '
+    {:>6s}	string aligned to the right that many spaces	'{:>6s}'.format('Py') → '    Py'
+    {:^6s}	string centered in that many spaces	'{:^6s}'.format('Py') → '  Py '
+
+
+Formatted string literals - f'string':
+- added in Python 3.6
+- string that starts with 'f' before quotes
+- {} is present in the string - variable name can be directly specified with {}
+- Example:
+    >>> name = "Micah"
+    >>> print(f'Hello {name}')
+    Hello Micah
+
+    >>> item = "Purple Cup"
+    >>> amount = 5
+    >>> price = amount * 3.25
+    >>> print(f'Item: {item} - Amount: {amount} - Price: {price:.2f}')
+    Item: Purple Cup - Amount: 5 - Price: 16.25
