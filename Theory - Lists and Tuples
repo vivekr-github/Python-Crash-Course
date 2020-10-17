@@ -1,0 +1,59 @@
+
+
+List:
+- sequences of elements of any data type, and are mutable
+- Data structure to store elements separated by commas.
+- can contain elements of any type
+- sequences of data - similar to strings
+- iterate over items, support indexing, len() give length, '+' to concatenate, 'in' to check value presence
+- difference - lists are mutable - contents can be changed
+- add, remove, modify element
+
+
+List Methods:
+- traversal - using for loops
+    for element in list:
+        statements
+- element check - using if
+    if element in list:
+- supports slicing - list[i:j]
+- append - add element at end of list
+    list.append("New data")
+- insert - add element in a specific positionn
+    list.insert(index, data)
+- remove - remove element - ValueError if not found - list gets reindexed after remove
+    list.remove(data)
+- pop - remove element at an index and returns it - ist gets reindexed after pop
+      - so it's best to pop from the end, in case elements from multiple indices need to be popped
+    list.pop(index)
+- update/modify - list[i] = "New data"
+- list.sort()
+- list.reverse()
+- list.clear()
+- list.copy()
+- list.extend(other-list)
+
+
+Tuples:
+- contain elements of any data type but are immutable
+- specified using ()
+- useful when we need to ensure element is in a certain position and won't change
+- example - when function returns multiple values - it returns them in a tuple - order is important
+- unpacking - storing the elements of a tuple in separate variables
+
+
+Enumerate:
+- used when - need to iterate over a list while having access to index
+- enumerate() function takes a list as parameter & returns a tuple for each element in the list.
+  First value is index & second value is the element.
+- example:
+    for index, element in enumerate(list):
+        statements
+
+
+List Comprehensions:
+- Create list from sequence or a range in a single line
+- example - [x*2 for x in range(1,11)]
+- supports conditions as well
+- example - [x for x in range(1,101) if x%10 ==0]
+- useful but complex
