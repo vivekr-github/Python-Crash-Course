@@ -1,0 +1,85 @@
+
+
+Operators:
+- Arithmetic
+ - mathematical operators
+    a + b = Add a and b
+    a - b = Subtract b from a
+    a * b = Multiply a and b
+    a / b = Divide a by b
+    a ** b = a to the power of b. For non integer values of b, a root (i.e. a**(1/2) is the square root of a)
+    a // b = Quotient of a by b
+    a % b = Remainder of of a by b
+
+- Comparison
+  - return Boolean True or False
+    a == b: a is equal to b
+    a != b: a is different than b
+    a < b: a is smaller than b
+    a <= b: a is smaller or equal to b
+    a > b: a is bigger than b
+    a >= b: a is bigger or equal to b
+
+- Logical
+  - join statements
+    a and b: True if both a and b are True. False otherwise.
+    a or b: True if either a or b or both are True. False if both are False.
+    not a: True if a is False, False if a is True.
+
+
+if else Statement:
+- code branching based on result of condition
+- syntax:
+    if condition:
+        statements
+    elif condition:
+        statements
+    else:
+        statements
+
+
+while Loop:
+- continuously execute code block while condition is true
+- initialize variable and with right value
+- ensure right condition, else code executes indefinitely (infinite loop)
+- mostly used when unknown number of operations to be performed and a condition needs to be checked at each iteration
+- syntax:
+    while condition:
+        statements
+
+
+for loop:
+- iterate over a sequence of elements, executing the body for each element
+- iterate over sequence of any kind of data
+- strings are iterable letter by letter ---> note
+- mostly used when there's a pre-defined sequence or range of numbers to iterate.
+- syntax:
+    for x in range(n):
+        statements
+
+
+range() function:
+- range(n) => 0 to n-1
+- range(a,b) => a to b-1
+- range(a,b,x) => a to k, in increments of x with k<b
+
+
+break:
+- interrupt while and for loop using break keyword.
+- interrupt cycle for a specific condition.
+
+
+continue:
+- skip the current iteration and continue with next.
+- used to jump ahead irrelevant elements.
+
+
+recursion:
+- include a recursive case and base case
+- recursive case - calls function again with different value
+- base case - returns a value
+- syntax:
+    def recursive_function(parameters):
+        if base_case_condition(parameters):
+            return base_case_value
+        recursive_function(modified_parameters)
