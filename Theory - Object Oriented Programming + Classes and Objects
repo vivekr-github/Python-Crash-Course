@@ -1,0 +1,38 @@
+
+
+Object Oriented Programming:
+- concepts modeled as classes and objects
+- idea - defined using class
+- object - instance of class
+- almost everything in python - object
+    strings, lists, dictionaries, numbers
+    when we create a list in python, we're creating object of list class
+- classes have
+    - attributes - characteristics of class
+    - methods - functions part of class
+- type() gives what class a variable belongs to
+- dir(object) - lists all attributes and methods of an object
+- help(object) - return the documentation for the corresponding class
+
+
+Defining Classes & Objects:
+Class
+- start with class keyword followed by name and a colon.
+- recommendation - start name with capital letter
+Object
+- create instance of class by assigning it to variable
+- set or access attributes, call methods using dot notation
+
+- syntax:
+    class class_name:
+        attribute1 = ""
+        attribute2 = ""
+
+    object1 = class_name()
+    object1.attribute1 = value1
+    object1.attribute2 = value2
+
+    object2 = class_name()
+    object2.attribute1 = value3
+    object2.attribute2 = value4
+    
