@@ -1,0 +1,30 @@
+
+
+For Loop:
+
+1. Factorial of a Number
+
+def factorial(n):
+    result = 1
+    for x in range(1,n+1):
+        result = result * x
+    return result
+
+for n in range(10):
+    print(n, factorial(n))
+
+
+2. Print cube of first 10 integers
+
+for x in range(1,11):
+  print(x**3)
+
+
+3. Print letters of a word
+
+def show_letters(word):
+	for letter in word:
+		print(letter)
+
+show_letters("Hello")
+# Should print one line per letter
