@@ -3,7 +3,7 @@
 Object Oriented Programming:
 - concepts modeled as classes and objects
 - idea - defined using class
-- object - instance of class
+- object - instance of class - all objects will have same behavior as parent class
 - almost everything in python - object
     strings, lists, dictionaries, numbers
     when we create a list in python, we're creating object of list class
