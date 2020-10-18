@@ -1,0 +1,8 @@
+
+Python Modules:
+- separate files that contain classes, functions & other data
+- can be imported and functionality used in programs
+- out of the box modules - Python Standard Library
+- 'import' keyword is used
+- example: import random -> functions of random module can now be used
+- Python module repository - https://pypi.org/
