@@ -1,0 +1,50 @@
+
+1. Appending and Printing strings:
+
+color = "Yellow"
+thing = "Sunshine"
+print(color + " is the color of " + thing)
+
+
+2. Type Conversion:
+
+total = 2048 + 4375 + 97685 + 125 + 8
+files = 5
+average = total / files
+print("Average file siez is " + str(average))
+
+
+3. Expressions and Variables:
+
+i. Calculate Bill Split
+
+bill = 47.28
+tip = bill * 0.15
+total = bill + tip
+share = total/2 
+print("Each person needs to pay: " + str(share))
+
+ii. Divide with integer result
+numerator = 10
+denominator = 10
+result = numerator / denominator
+print(int(result))
+(or)
+numerator = 10
+denominator = 10
+result = numerator // denominator
+print(result)
+
+iii. String concatenate
+word1 = "How"
+word2 = "do"
+word3 = "you"
+word4 = "like"
+word5 = "Python"
+word6 = "so"
+word7 = "far?"
+print(word1 + " " + word2+" "+word3+" "+word4+" "+word5+" "+word6+" "+word7)
+
+iv. Type conversion
+print("2 + 2 = " + str(2 + 2))
+
