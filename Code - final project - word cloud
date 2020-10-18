@@ -1,0 +1,76 @@
+
+
+
+# Final Project - Create a WordCloud
+
+!pip install wordcloud
+!pip install ipywidgets
+
+import wordcloud
+import numpy as np
+from matplotlib import pyplot as plt
+from IPython.display import display
+import io
+import sys
+
+file_contents = open("input.txt", 'r')
+
+# Here is a list of punctuations and uninteresting words you can use to process your text
+punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+uninteresting_words = ["the", "a", "to", "if", "is", "it", "of", "and", "or", "an", "as", "i", "me", "my",
+                       "we", "our", "ours", "you", "your", "yours", "he", "she", "him", "his", "her", "hers", "its",
+                       "they", "them",
+                       "their", "what", "which", "who", "whom", "this", "that", "am", "are", "was", "were", "be",
+                       "been", "being",
+                       "have", "has", "had", "do", "does", "did", "but", "at", "by", "with", "from", "here", "when",
+                       "where", "how",
+                       "all", "any", "both", "each", "few", "more", "some", "such", "no", "nor", "too", "very", "can",
+                       "will", "just"]
+
+# LEARNER CODE START HERE
+
+str = ''
+
+for line in file_contents:
+    str = str + line
+
+str_list = str.split()
+
+for string in str_list:
+    if not string.isalpha():
+        str_list.remove(string)
+
+str_list1 = [string.lower() for string in str_list]
+
+indx = []
+
+for index, string in enumerate(str_list1):
+    for stri in uninteresting_words:
+        if string == stri:
+            indx.append(index)
+
+
+#Here the uninteresting words are being popped from the list
+#It is critical to pop from the end of the list (reverse direction)
+for index in sorted(indx, reverse=True):
+    str_list1.pop(index)
+
+word1_dict = {}
+
+for string1 in str_list1:
+    if string1 in word1_dict.keys():
+        word1_dict[string1] += 1
+    else:
+        word1_dict.update({string1: 1})
+
+
+# wordcloud
+cloud = wordcloud.WordCloud()
+cloud.generate_from_frequencies(word1_dict)
+return cloud.to_array()
+
+# Display your wordcloud image
+myimage = calculate_frequencies(file_contents)
+plt.imshow(myimage, interpolation='nearest')
+plt.axis('off')
+plt.show()
