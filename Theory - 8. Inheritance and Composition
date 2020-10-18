@@ -1,0 +1,57 @@
+
+
+
+Inheritance:
+- Build relationships between objects - grouping together similar concepts
+- reduce code duplication.
+- In python - use parentheses in the class declaration to have the class inherit from another class
+- Allows to use objects as attributes and access their attributes and methods
+- Example:
+    class Fruit:
+       def __init__(self, color, flavor):
+            self.color = color
+            self.flavor = flavor
+
+    class Apple(Fruit):
+        pass
+
+    class Grape(Fruit):
+        pass
+
+    granny_smith = Apple("green", "tart")
+    carnelian = Grape("purple", "sweet")
+    print(granny_smith.flavor)
+    tart
+    print(carnelian.color)
+    purple
+
+- allows us to define attributes or methods that are shared by all types of fruits - prevents individual creation
+- define parent class - have n child classes inherit from parent class
+- child classes will have attributes from parent as well as own attributes
+
+
+Object Composition:
+- situation where two classes are related but there is no inheritance
+- one class makes use of code contained in another class
+- Example: (Twp classes)
+    - Package class - attributes about the software package, like name, version, and size
+    - Repository class - all the packages available for installation
+    - No inheritance but relationship exists
+    - Repository class - will contain dictionary/list of packages
+
+    class Repository:
+     def __init__(self):
+         self.packages = {}
+     def add_package(self, package):
+         self.packages[package.name] = package
+     def total_size(self):
+         result = 0
+         for package in self.packages.values():
+             result += package.size
+         return result
+
+    - constructor method - initializes package dictionary
+    - add_package method - takes package object as parameter and adds it to dictionary, using package name as key
+    - total_size method - computes total size of all packages in repository
+    - we're using package attributes in our repository class & we're also calling values() method in packages instances
+    
