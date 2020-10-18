@@ -1,0 +1,55 @@
+
+
+Methods:
+- functions that operate on attributes of object that invokes it
+- define methods by creating functions within class definition
+- take a parameter 'self' - represents object being executed upon
+- allows 'dot' notation based access to instance attributes.
+- syntax:
+    class ClassName:
+        def method_name(self, other_parameters):
+          body_of_method
+
+
+Special Methods:
+- special methods start and end with two underscores
+
+Constructor:
+- special method - set values of attributes during creation of instances
+- prevents omission of values assignment due to human error
+- helps avoid unnecessary lines of code
+- called when name of class is called
+- always named '__init__'
+- takes self variable - represents instance and attributes
+- example:
+       class Apple:
+            def __init__(self, color, flavor):
+                self.color = color
+                self.flavor = flavor
+
+String:
+- special method - defines how instance of object will be printed when passed to print() function
+- if not defined - default representation (position of object in memory) will be printed
+- useful if a specific message is to be printed via the object.
+- example:
+        class Apple:
+            def __str__(self):
+                return "This apple is {} and its flavor is {}".format(self.color, self.flavor)
+
+
+Docstrings:
+- add documentation to classes, methods and functions
+- short text explanation of what something does
+- define class/method/function -> add description inside tripe quotes
+- invoked by 'help' function - returns basic info about methods in class
+- useful when others utilise our code and we utilise other's code
+- example:
+    def to_seconds(hours, minutes, seconds):
+        """Returns the amount of seconds in the given hours, minutes and seconds."""
+        return hours*3600+minutes*60+seconds
+
+    help(to_seconds)
+    Help on function to_seconds in module __main__:
+
+    to_seconds(hours, minutes, seconds)
+        Returns the amount of seconds in the given hours, minutes and seconds.
