@@ -1,0 +1,135 @@
+
+
+Functions:
+
+1. Function to calculate total seconds - Input: hrs, mins, sec
+
+def get_seconds(hours, minutes, seconds):
+  return 3600*hours + 60*minutes + seconds
+
+amount_a = get_seconds(2,30,0)
+amount_b = get_seconds(0,45,15)
+result = amount_a + amount_b
+print(result)
+
+
+2. Function to convert miles to km
+
+# 1) Complete the function to return the result of the conversion
+def convert_distance(miles):
+	km = miles * 1.6  # approximately 1.6 km in 1 mile
+	return km
+
+my_trip_miles = 55
+
+# 2) Convert my_trip_miles to kilometers by calling the function above
+my_trip_km = convert_distance(my_trip_miles)
+
+# 3) Fill in the blank to print the result of the conversion
+print("The distance in kilometers is " + str(my_trip_km))
+
+# 4) Calculate the round-trip in kilometers by doubling the result,
+#    and fill in the blank to print the result
+rtt = 2 * my_trip_km
+print("The round-trip in kilometers is " + str(rtt))
+
+
+3. Function to calculate block storage:
+
+def calculate_storage(filesize):
+    block_size = 4096
+    # Use floor division to calculate how many blocks are fully occupied
+    full_blocks = filesize//4096
+    # Use the modulo operator to check whether there's any remainder
+    partial_block_remainder = filesize%4096
+    # Depending on whether there's a remainder or not, return
+    # the total number of bytes required to allocate enough blocks
+    # to store your data.
+    if partial_block_remainder > 0:
+        return (full_blocks+1)*4096
+    return full_blocks*4096
+
+print(calculate_storage(1))    # Should be 4096
+print(calculate_storage(4096)) # Should be 4096
+print(calculate_storage(4097)) # Should be 8192
+print(calculate_storage(6000)) # Should be 8192
+
+
+4. Translate Color to Hex
+
+def color_translator(color):
+	if color == "red":
+		hex_color = "#ff0000"
+	elif color == "green":
+		hex_color = "#00ff00"
+	elif color == "blue":
+		hex_color = "#0000ff"
+	else:
+		hex_color = "unknown"
+	return hex_color
+
+print(color_translator("blue")) # Should be #0000ff
+print(color_translator("yellow")) # Should be unknown
+print(color_translator("red")) # Should be #ff0000
+print(color_translator("black")) # Should be unknown
+print(color_translator("green")) # Should be #00ff00
+print(color_translator("")) # Should be unknown
+
+
+5. Function to return Full Name
+
+def format_name(first_name, last_name):
+	string = ""
+	if(last_name!=""):
+		string = last_name
+
+	if(first_name!="" and string!=""):
+		string = string + ", " + first_name
+	elif(first_name!=""):
+		string = first_name
+	return string
+
+
+print(format_name("Ernest", "Hemingway"))
+# Should return the string "Name: Hemingway, Ernest"
+
+print(format_name("", "Madonna"))
+# Should return the string "Name: Madonna"
+
+print(format_name("Voltaire", ""))
+# Should return the string "Name: Voltaire"
+
+print(format_name("", ""))
+# Should return an empty string
+
+
+6. Function to find longest of 3 words
+
+def longest_word(word1, word2, word3):
+	if len(word1) >= len(word2) and len(word1) >= len(word3):
+		word = word1
+	elif len(word2)>len(word3):
+		word = word2
+	else:
+		word = word3
+	return(word)
+
+print(longest_word("chair", "couch", "table"))
+print(longest_word("bed", "bath", "beyond"))
+print(longest_word("laptop", "notebook", "desktop"))
+
+
+7. Function to return fraction part of division
+
+def fractional_part(numerator, denominator):
+	if(denominator==0 or numerator==0):
+		return 0
+	fractional_part = (numerator/denominator)-(numerator)//denominator
+	return fractional_part
+
+print(fractional_part(5, 5)) # Should be 0
+print(fractional_part(5, 4)) # Should be 0.25
+print(fractional_part(5, 3)) # Should be 0.66...
+print(fractional_part(5, 2)) # Should be 0.5
+print(fractional_part(5, 0)) # Should be 0
+print(fractional_part(0, 5)) # Should be 0
