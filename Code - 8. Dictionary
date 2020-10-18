@@ -53,3 +53,42 @@ groceries = {"bananas": 1.56, "apples": 2.50, "oranges": 0.99, "bread": 4.59,
 	"coffee": 6.99, "milk": 3.39, "eggs": 2.98, "cheese": 5.44}
 
 print(add_prices(groceries)) # Should print 28.44
+
+
+4. Information about cars
+
+def car_listing(car_prices):
+  result = ""
+  for name,price in car_prices.items():
+    result += f"{name} costs {price} dollars\n"
+  return result
+
+print(car_listing({"Kia Soul":19000, "Lamborghini Diablo":55000, "Ford Fiesta":13000, "Toyota Prius":24000}))
+
+
+5. Count frequency of letters in a string
+
+def count_letters(text):
+  result = {}
+  # Go through each letter in the text
+  for letter in text:
+    # Check if the letter needs to be counted or not
+    if letter.isalpha():
+      letter = letter.lower()
+    else:
+      continue
+    if(letter in result.keys()):
+      result[letter]+= 1
+      continue
+    # Add or increment the value in the dictionary
+    result[letter]=1
+  return result
+
+print(count_letters("AaBbCc"))
+# Should be {'a': 2, 'b': 2, 'c': 2}
+
+print(count_letters("Math is fun! 2+2=4"))
+# Should be {'m': 1, 'a': 1, 't': 1, 'h': 1, 'i': 1, 's': 1, 'f': 1, 'u': 1, 'n': 1}
+
+print(count_letters("This is a sentence."))
+# Should be {'t': 2, 'h': 1, 'i': 2, 's': 3, 'a': 1, 'e': 3, 'n': 2, 'c': 1}
